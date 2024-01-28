@@ -33,8 +33,18 @@ https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documen
 
 
 # 設計図
+Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにしています。
+必要な設計図はつぎのGitHub資料に記載されていたので流用します。
+
+[Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)
 
 ## 配線図
+下図は[Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)のp56からの引用した配線図です。このとおりに配線していきます。
+
+
+
+
+# 組み立て
 
 
 # ソースコード
