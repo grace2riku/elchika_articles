@@ -38,6 +38,10 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 
 [Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)
 
+# 組み立て
+## エンコーダの取り付け
+
+# 配線
 ## 配線図
 下図は[Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)のp56からの引用した配線図です。このとおりに配線していきます。
 
@@ -47,8 +51,8 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 ### モーター（AOUT2, BOUT2）の配線について
 モーター（AOUT2, BOUT2）の配線は下図のようにモータ上側の端子（ケースに近い方）と接続します（赤の配線がAOUT2, BOUT2）。
 
-
-# 組み立て
+### 電源の配線について
+配線図では電源は基板で分配されています。今回は電源分配用基板を使わず、ブレッドボードで電源ラインを分配します。
 
 
 # ソースコード
@@ -58,7 +62,7 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 
 
 ## ライセンス
-## LGPL-2.1 license
+### LGPL-2.1 license
 つぎのファイルは **【LGPL-2.1 license】** です。
 
 * CatMoeller/Main_Rover_PID_Adjustment/Main_Rover_PID_Adjustment.ino
@@ -68,5 +72,5 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 
 * https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Main_Rover_PID_Adjustment
 
-## MIT license
+### MIT license
 上記以外のソースコードは **【MIT license】** です。
