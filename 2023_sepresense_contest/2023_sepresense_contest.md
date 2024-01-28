@@ -1,3 +1,9 @@
+# Spresenseモーラーについて
+Spresenseがモーターを駆動し、モーラーをランダムに動かします。
+
+猫を楽しませるためのロボットです。次の図がSpresenseモーラーの全体写真です。
+
+
 # 部品
 Spresenseモーラーの使用部材です。
 
@@ -26,3 +32,21 @@ Spresenseモーラーの使用部材です。
 
 
 # ソースコード
+ソースコードはつぎのGitHubリポジトリに格納しています。
+
+* https://github.com/grace2riku/cat_moeller_spresense
+
+
+## ライセンス
+## LGPL-2.1 license
+つぎのファイルは **【LGPL-2.1 license】** です。
+
+* CatMoeller/Main_Rover_PID_Adjustment/Main_Rover_PID_Adjustment.ino
+* CatMoeller/Main_Rover_PID_Adjustment/pwm_control.ino
+
+ベースにしたつぎのリポジトリのライセンスと同様です。
+
+* https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Main_Rover_PID_Adjustment
+
+## MIT license
+上記以外のソースコードは **【MIT license】** です。
