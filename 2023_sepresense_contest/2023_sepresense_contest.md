@@ -107,6 +107,29 @@ Spresenseモーラーのメインの責務はつぎの2つです。
 * 移動方向（前進・後進・右回り・左回り）
 
 ## ベースにしたソースコード
+Spresenseモーターはつぎのプログラムをベースにしています。
+
+* [Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)のp64 **SprTurtleBot のPID調整プログラム**
+
+### プログラムの概要
+プログラムの概要はp64から引用した下図を参照してください。
+
+各ブロックはつぎの役割があります。
+* メインコアはpythonプログラム→サブコアから伝達されたモーター駆動パラメータを受信する
+* メインコアは受信したパラメータに従いモーターを駆動する
+* サブコアはpythonプログラムからWifiでモーター駆動パラメータを受信する
+* サブコアはモーター駆動パラメータをコア間通信でメインコアに送信する
+* pythonプログラムはユーザーから入力されたモーター駆動パラメータをWifiでサブコアに送信する
+
+### ソースコードの構成
+PID調整プログラムのSpresenseソースコードはメインコアとサブコアの2つになります。
+
+メインコアのGitHubリポジトリはこちらです。
+* https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Main_Rover_PID_Adjustment
+
+サブコアのGitHubリポジトリはこちらです。
+* https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Sub_WiFi_Connection
+
 
 ## ベースのソースコードからの変更点
 
