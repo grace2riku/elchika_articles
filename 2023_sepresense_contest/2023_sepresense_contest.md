@@ -1,5 +1,19 @@
+# ライセンス
+## LGPL-2.1 license
+つぎのファイルは **【LGPL-2.1 license】** です。
+
+* CatMoeller/Main_Rover_PID_Adjustment/Main_Rover_PID_Adjustment.ino
+* CatMoeller/Main_Rover_PID_Adjustment/pwm_control.ino
+
+ベースにしたつぎのリポジトリのライセンスと同様です。
+
+* https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Main_Rover_PID_Adjustment
+
+## MIT license
+上記以外のソースコードは **【MIT license】** です。
+
 # Spresenseモーラーについて
-Spresenseがモーターを駆動し、モーラーをランダムに動かします。
+Spresenseがモーターを駆動し、モーラーをランダムなスピード・方向に動かします。
 
 猫を楽しませるためのロボットです。次の図がSpresenseモーラーの全体写真です。
 
@@ -76,43 +90,32 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 
 
 # ソースコード
-ソースコードはつぎのGitHubリポジトリに格納しています。
+SpresenseモーラーのソースコードはつぎのGitHubリポジトリに格納しています。
 
 * https://github.com/grace2riku/cat_moeller_spresense
 
+開発環境はArduino IDEです。
 
-## ライセンス
-### LGPL-2.1 license
-つぎのファイルは **【LGPL-2.1 license】** です。
-
-* CatMoeller/Main_Rover_PID_Adjustment/Main_Rover_PID_Adjustment.ino
-* CatMoeller/Main_Rover_PID_Adjustment/pwm_control.ino
-
-ベースにしたつぎのリポジトリのライセンスと同様です。
-
-* https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/tree/main/Sketches/SprTurtleBot_PID_Adjustment/Main_Rover_PID_Adjustment
-
-### MIT license
-上記以外のソースコードは **【MIT license】** です。
-
-## ソースコードの配置
+## Spresenseモーラーの責務
 Spresenseモーラーのメインの責務はつぎの2つです。
 
-* モーター駆動をおこなうソースコード
-* モーター駆動パラメータを生成するソースコード
+* モーター駆動パラメータを生成する
+* モーター駆動パラメータでモーターを駆動する
 
 モーター駆動パラメータはつぎになります。
 * 移動スピード（0〜1.0(m/s) ）
 * 移動方向（前進・後進・右回り・左回り）
 
+## ベースにしたソースコード
 
-開発環境はArduino IDEです。
+## ベースのソースコードからの変更点
 
+
+## ソースコードの配置
 ソースコードはつぎの配置になっています。
 
-
 ### モーター駆動
-モータ駆動のソースコードはつぎになります。
+モーター駆動のソースコードはつぎになります。
 
 * CatMoeller/Main_Rover_PID_Adjustment
   * Main_Rover_PID_Adjustment.ino
@@ -134,7 +137,6 @@ Spresenseモーラーのメインの責務はつぎの2つです。
 モーター駆動のパラメータ生成はサブコア1に配置します。
 
 
-## モーター駆動（メインコアに配置）のソースコードの説明
+## モーター駆動（メインコアに配置）のソースコード
 
-
-## モーター駆動のパラメータ生成（サブコア1に配置）のソースコードの説明
+## モーター駆動のパラメータ生成（サブコア1に配置）のソースコード
