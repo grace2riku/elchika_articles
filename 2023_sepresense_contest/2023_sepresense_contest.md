@@ -94,3 +94,47 @@ Spresenseモーラーは前述したとおり**SprTurtleBot**をベースにし�
 
 ### MIT license
 上記以外のソースコードは **【MIT license】** です。
+
+## ソースコードの配置
+Spresenseモーラーのメインの責務はつぎの2つです。
+
+* モーター駆動をおこなうソースコード
+* モーター駆動パラメータを生成するソースコード
+
+モーター駆動パラメータはつぎになります。
+* 移動スピード（0〜1.0(m/s) ）
+* 移動方向（前進・後進・右回り・左回り）
+
+
+開発環境はArduino IDEです。
+
+ソースコードはつぎの配置になっています。
+
+
+### モーター駆動
+モータ駆動のソースコードはつぎになります。
+
+* CatMoeller/Main_Rover_PID_Adjustment
+  * Main_Rover_PID_Adjustment.ino
+  * pwm_control.ino
+
+モータ駆動のコードはメインコアに配置します。
+
+
+### モーター駆動のパラメータ生成
+モーター駆動のパラメータ生成のソースコードはつぎになります。
+
+* RandomParameterCreater/cat_moeller_spresense
+  * src/ntshell
+  * RandomParameterCreater.cpp
+  * RandomParameterCreater.h
+  * cat_moeller_spresense.ino
+  * usrcmd_cat_moeller_spresense.cpp
+
+モーター駆動のパラメータ生成はサブコア1に配置します。
+
+
+## モーター駆動（メインコアに配置）のソースコードの説明
+
+
+## モーター駆動のパラメータ生成（サブコア1に配置）のソースコードの説明
