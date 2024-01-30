@@ -132,6 +132,43 @@ PID調整プログラムのSpresenseソースコードはメインコアとサ�
 
 
 ## ベースのソースコードからの変更点
+下図はSpresenseモーラーのソフトウェアをブロック図で表しています。
+
+ベースにしたコードとつぎの点が違います。
+1. Ubuntuとpythonプログラムがない
+2. サブコア1はWi-Fiを使わない
+
+### Ubuntuとpythonプログラムがない
+SpresenseモーラーはPC不要でハードウェアのみで動作するようにしたかったため、Ubuntuとpythonプログラムが不要になりました。
+
+サブコア1でモーター駆動のパラメーターをランダムで生成します。
+
+サブコア1は1.5秒周期でメインコアにコア間通信で生成したモーター駆動パラメーターを送信します。
+
+**モーター駆動パラメータ**はつぎの項目です。
+* 移動スピード
+  * -1.0〜1.0(m/s)の範囲からランダム値で決定する（0 <= 1は前進、-1 <= 0は後進）
+* 移動方向
+  * 前進・後進（0）、右回り（-1）、左回り（1）の範囲からランダムで決定する
+
+サブコア1はPID係数もコア間通信で送信していますが、固定値としています。
+* KP = 120
+* KI = 30
+* KD = 3
+
+本当はPID係数はSpresnseモーラーの動作環境によって調整すると思いますが今回は固定値としました。
+
+PID係数は参考資料[Spresense とmicro-ROS ではじめるロボットプログラミング.pdf](https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Documents/Spresense%20%E3%81%A8micro-ROS%20%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0.pdf)のp69以降の**SprTurtleBotのプログラム**のGitHubリポジトリの設定値を使うことにしました。
+
+SprTurtleBotのGitHubリポジトリ:
+
+https://github.com/TE-YoshinoriOota/Spresense-microROS-Seminar/blob/main/Sketches/SprTurtleBot/Sub_Rover_Control/Sub_Rover_Control.ino
+
+
+### サブコア1はWi-Fiを使わない
+ベースのソースコードはサブコア1がWi-Fi経由でpythonプログラムからパラメータを受信していました。
+
+pythonプログラムが不要になり、サブコア1自身でパラメータを生成するようにしたのでWi-Fiのインタフェースも不要になりました。
 
 
 ## ソースコードの配置
